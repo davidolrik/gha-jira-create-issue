@@ -1,0 +1,40 @@
+name: "Create JIRA issue"
+
+description: "Create JIRA issue on JIRA Server with GitHub Actions"
+
+inputs:
+  jira_base_url:
+    description: JIRA Server base url
+    required: true
+  jira_username:
+    description: JIRA Server username
+    required: true
+  jira_password:
+    description: JIRA Server password
+    required: true
+  project:
+    description: JIRA Project key
+    required: true
+  issue_assignee:
+    description: Username of person to solve the issue
+    required: true
+  issue_title:
+    description: Issue title
+    required: true
+  issue_body:
+    description: Issue content
+    required: true
+  issue_type:
+    description: Issue type
+    required: false
+    default: "Task"
+
+outputs:
+  jira-issue-url:
+    description: Url to the newly created issue
+  jira-issue-id:
+    description: JIRA Issue id of newly created issue
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
