@@ -28,6 +28,10 @@ inputs:
     description: Issue type
     required: false
     default: "Task"
+  issue_fields:
+    description: JSON object of extra fields that will be added on create
+    required: false
+    default: "{}"
 
 outputs:
   jira-issue-url:
