@@ -34,6 +34,7 @@ required_fields = {
     "summary": settings.ISSUE_TITLE,
     "description": settings.ISSUE_BODY,
     "issuetype": {"name": settings.ISSUE_TYPE},
+    "assignee": {"name": settings.ISSUE_ASSIGNEE},
 }
 optional_fields = loads(settings.ISSUE_FIELDS)
 
